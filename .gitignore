@@ -1,0 +1,31 @@
+# Python
+__pycache__/
+*.py[cod]
+*.so
+.venv/
+venv/
+env/
+
+# Jupyter / Colab
+.ipynb_checkpoints/
+
+# IDEs e sistema operacional
+.vscode/
+.idea/
+.DS_Store
+Thumbs.db
+
+# Credenciais e segredos
+.env
+*.env
+secrets.*
+credentials.*
+
+# Arquivos temporários
+*.tmp
+*.temp
+*.log
+
+# Credenciais IBM / arquivos locais sensíveis
+ibm-quantum-credentials.json
+qiskit-ibm.json
