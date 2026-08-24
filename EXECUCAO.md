@@ -32,7 +32,7 @@ O experimento utiliza:
 - 10.000 bits por lote;
 - 300.000 bits no total;
 - Mersenne Twister;
-- semente fixa igual a 7.
+- semente de 7 ou 42.
 
 Para reproduzir o experimento:
 
@@ -407,18 +407,3 @@ O manifesto detalhado da origem desses dados está disponível em:
 `PROVENANCE.md`
 
 ---
-
-## 15. Preparação da versão utilizada no artigo
-
-Antes da criação da versão final do projeto:
-
-1. conferir os dados e resultados;
-2. executar integralmente os notebooks aplicáveis;
-3. preservar as saídas pertinentes;
-4. verificar a ausência de credenciais;
-5. conferir os checksums;
-6. confirmar os arquivos de métricas e metadados;
-7. registrar o commit exato utilizado no artigo;
-8. criar uma release identificada como `v1.0.0`.
-
-A release deve representar a versão exata do código, dos dados e das análises associados ao artigo.
