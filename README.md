@@ -25,7 +25,7 @@ A comparação principal corresponde, portanto, a 1.200.000 bits distribuídos e
 
 ## Estrutura do repositório
 
-```text
+``text
 dados/
 ├── bruto/
 │   ├── qpu_bruta_lote_01.txt
