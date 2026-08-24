@@ -378,10 +378,7 @@ checksums/SHA256SUMS.txt
 
 Os hashes permitem verificar a integridade dos arquivos e identificar eventuais alterações em seu conteúdo.
 
-Em sistemas Linux, a verificação pode ser realizada com:
 
-```
----
 
 ## Tecnologias utilizadas
 
