@@ -380,10 +380,7 @@ Os hashes permitem verificar a integridade dos arquivos e identificar eventuais 
 
 Em sistemas Linux, a verificação pode ser realizada com:
 
-```bash
-sha256sum -c SHA256SUMS.txt
 ```
-
 ---
 
 ## Tecnologias utilizadas
