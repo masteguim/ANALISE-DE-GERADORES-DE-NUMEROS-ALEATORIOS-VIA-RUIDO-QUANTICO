@@ -12,7 +12,7 @@ Foram consideradas quatro fontes principais:
 
 - PRNG didático baseado no Mersenne Twister;
 - CSPRNG utilizando fonte segura do sistema operacional;
-- simulador de# Análise comparativa de geradores pseudorrandômicos e de sequências obtidas por medição quântica
+- simulador de Análise comparativa de geradores pseudorrandômicos e de sequências obtidas por medição quântica
 
 ### Implicações para a segurança da informação
 
