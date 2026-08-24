@@ -238,7 +238,7 @@ Para cada lote são armazenados, quando aplicável:
 
 ---
 
-## 📐 Comparação estatística entre as fontes
+## Comparação estatística entre as fontes
 
 Além da análise descritiva, são utilizados procedimentos inferenciais para comparação dos lotes.
 
