@@ -510,35 +510,6 @@ Para a comparação padronizada, cada fonte foi analisada em:
 
 A comparação principal corresponde, portanto, a 1.200.000 bits distribuídos entre as quatro fontes.
 
-## Estrutura do repositório
-
-``text
-dados/
-├── bruto/
-│   ├── qpu_bruta_lote_01.txt
-│   ├── qpu_bruta_lote_02.txt
-│   ├── ...
-│   └── qpu_bruta_lote_30.txt
-│
-├── metricas/
-│   ├── prng_metricas_30x10000.csv
-│   ├── csprng_metricas_30x10000.csv
-│   ├── simulador_metricas_30x10000.csv
-│   ├── qpu_bruta_metricas_30x10000.csv
-│   └── qpu_condicionamento_metricas.csv
-│
-└── metadados/
-    └── qpu_metadados_coleta.csv
-
-notebooks/
-├── IC_PRNG_padronizado_estatistica.ipynb
-├── CSPRNG_padronizado_estatistica.ipynb
-├── sim_QRNGs_padronizado_estatistica.ipynb
-└── IC_QRNG_IBM_padronizado_estatistica.ipynb
-
-checksums/
-└── SHA256SUMS.txt
-
 Os arquivos publicados correspondem aos dados e procedimentos utilizados na elaboração das análises apresentadas no artigo.
 
 Notebooks
