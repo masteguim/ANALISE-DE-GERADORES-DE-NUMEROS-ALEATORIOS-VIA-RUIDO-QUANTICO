@@ -102,39 +102,6 @@ A coleta padronizada foi executada em hardware quântico real da IBM.
 | Total | `300.000 bits` |
 
 O experimento deve ser interpretado como uma demonstração utilizando um dispositivo quântico confiado, e não como um QRNG certificado ou independente de dispositivo.
-
----
-
-## Estrutura do repositório
-
-```text
-dados/
-├── bruto/
-│   ├── qpu_bruta_lote_01.txt
-│   ├── qpu_bruta_lote_02.txt
-│   ├── ...
-│   └── qpu_bruta_lote_30.txt
-│
-├── metricas/
-│   ├── prng_metricas_30x10000.csv
-│   ├── csprng_metricas_30x10000.csv
-│   ├── simulador_metricas_30x10000.csv
-│   ├── qpu_bruta_metricas_30x10000.csv
-│   └── qpu_condicionamento_metricas.csv
-│
-└── metadados/
-    └── qpu_metadados_coleta.csv
-
-notebooks/
-├── IC_PRNG_padronizado_estatistica.ipynb
-├── CSPRNG_padronizado_estatistica.ipynb
-├── sim_QRNGs_padronizado_estatistica.ipynb
-└── IC_QRNG_IBM_padronizado_estatistica.ipynb
-
-checksums/
-└── SHA256SUMS.txt
-```
-
 ---
 
 ## Notebooks
