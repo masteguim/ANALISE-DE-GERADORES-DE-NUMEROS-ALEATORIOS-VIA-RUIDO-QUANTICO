@@ -1,4 +1,4 @@
-# Análise de Geradores de Números Aleatórios via Ruído Quântico
+# ANÁLISE COMPARATIVA DE GERADORES PSEUDORRANDÔMICOS E DE SEQUÊNCIAS OBTIDAS POR MEDIÇÃO QUÂNTICA: IMPLICAÇÕES PARA A SEGURANÇA DA INFORMAÇÃO 
 
 Este repositório reúne os notebooks desenvolvidos para uma Iniciação Científica voltada à análise e comparação de diferentes mecanismos de geração de números aleatórios, incluindo geradores pseudorrandômicos, geradores criptograficamente seguros, simulação de circuitos quânticos e execução em hardware quântico real.
 
