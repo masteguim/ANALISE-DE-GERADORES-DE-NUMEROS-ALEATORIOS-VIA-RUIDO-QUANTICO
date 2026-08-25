@@ -37,7 +37,7 @@ A comparação padronizada utiliza:
 
 Gerador pseudorrandômico didático baseado no **Mersenne Twister**, utilizando o módulo `random` do Python.
 
-- sementes principais: `7` e `42`;
+- semente principal: `7`;
 - inicialização única antes dos 30 lotes;
 - utilizado como referência determinística;
 - não destinado ao uso criptográfico.
