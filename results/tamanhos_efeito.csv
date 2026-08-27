@@ -1,0 +1,7 @@
+teste,metrica,comparacao,tamanho_efeito,valor
+Kruskal-Wallis,vies,global,epsilon_quadrado,0.0
+Kruskal-Wallis,entropia_shannon,global,epsilon_quadrado,0.0
+Kruskal-Wallis,min_entropia,global,epsilon_quadrado,0.0
+Kruskal-Wallis,autocorrelacao_lag1,global,epsilon_quadrado,0.0
+Kruskal-Wallis,runs_z,global,epsilon_quadrado,0.0
+Kruskal-Wallis,runs_p,global,epsilon_quadrado,0.0

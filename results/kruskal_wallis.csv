@@ -1,0 +1,7 @@
+metrica,fontes,n_total,k_grupos,H,gl,p_valor,epsilon_quadrado,significativo_alfa_005,observacao
+vies,PRNG; CSPRNG; Simulador; QPU,120,4,1.6897383355445272,3,0.6392176034424719,0.0,False,Análise exploratória; os 30 lotes da QPU pertencem à mesma coleta e não constituem réplicas temporais independentes.
+entropia_shannon,PRNG; CSPRNG; Simulador; QPU,120,4,1.7095251824551765,3,0.6348182099805826,0.0,False,Análise exploratória; os 30 lotes da QPU pertencem à mesma coleta e não constituem réplicas temporais independentes.
+min_entropia,PRNG; CSPRNG; Simulador; QPU,120,4,1.7095251824551765,3,0.6348182099805826,0.0,False,Análise exploratória; os 30 lotes da QPU pertencem à mesma coleta e não constituem réplicas temporais independentes.
+autocorrelacao_lag1,PRNG; CSPRNG; Simulador; QPU,120,4,1.9036363636363944,3,0.5926461645057948,0.0,False,Análise exploratória; os 30 lotes da QPU pertencem à mesma coleta e não constituem réplicas temporais independentes.
+runs_z,PRNG; CSPRNG; Simulador; QPU,120,4,1.9036363636363944,3,0.5926461645057948,0.0,False,Análise exploratória; os 30 lotes da QPU pertencem à mesma coleta e não constituem réplicas temporais independentes.
+runs_p,PRNG; CSPRNG; Simulador; QPU,120,4,1.22528925619838,3,0.7469455116925563,0.0,False,Análise exploratória; os 30 lotes da QPU pertencem à mesma coleta e não constituem réplicas temporais independentes.
