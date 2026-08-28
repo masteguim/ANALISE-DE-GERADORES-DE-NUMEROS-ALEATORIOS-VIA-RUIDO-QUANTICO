@@ -2,10 +2,10 @@ cff-version: 1.2.0
 message: "Se você utilizar este repositório, cite-o da seguinte forma."
 title: "Análise comparativa de geradores pseudorrandômicos e de sequências obtidas por medição quântica"
 type: software
+
 authors:
   - family-names: "Masteguim"
     given-names: "Lucas Diniz Ferreira"
-version: 1.0.0
-date-released: 2026-08-24
+    affiliation: "Universidade Presbiteriana Mackenzie"
+
 repository-code: "https://github.com/masteguim/ANALISE_COMPARATIVA_DE_GERADORES_PSEUDORRANDOMICOS_E_DE_SEQUENCIAS_OBTIDAS_POR_MEDICAO_QUANTICA"
-institution: "Universidade Presbiteriana Mackenzie"
