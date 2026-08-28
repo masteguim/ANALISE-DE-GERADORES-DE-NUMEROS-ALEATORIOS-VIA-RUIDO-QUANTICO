@@ -1,9 +1,24 @@
-Declaração de uso ético de Inteligência Artificial
+# Uso de Inteligência Artificial
 
-Durante o desenvolvimento desta pesquisa, foi utilizada a ferramenta ChatGPT, da OpenAI, como recurso auxiliar em atividades de revisão textual e apoio à elaboração e revisão de códigos.
+Durante o desenvolvimento desta pesquisa, foi utilizada a ferramenta ChatGPT, da OpenAI, como recurso auxiliar em atividades específicas de apoio ao trabalho acadêmico e computacional.
 
-A ferramenta não foi utilizada como substituta da análise científica, da execução dos experimentos ou da tomada de decisões metodológicas.
+O uso da ferramenta ocorreu principalmente nas seguintes atividades:
 
-O emprego da ferramenta foi realizado de maneira complementar, mantendo-se a autoria, o julgamento crítico e a responsabilidade acadêmica sobre o conteúdo apresentado. Essa utilização busca seguir os princípios de uso responsável, crítico, transparente e supervisionado por seres humanos estabelecidos pelo Referencial para o Desenvolvimento e Uso Responsáveis de Inteligência Artificial na Educação, publicado pelo Ministério da Educação em 2026.
+- revisão textual e gramatical;
+- apoio à estruturação de códigos;
+- identificação e correção de erros de programação;
 
-link do artigo: https://www.gov.br/mec/pt-br/referencial-de-ia-na-educacao
+A ferramenta não substituiu a execução dos experimentos, a obtenção dos dados, a definição metodológica nem a interpretação científica dos resultados.
+
+Os códigos utilizados na pesquisa foram executados pelo autor, e os resultados apresentados foram obtidos a partir das fontes e dos ambientes experimentais descritos no trabalho.
+
+As informações, sugestões, códigos e textos produzidos com auxílio de Inteligência Artificial foram revisados e verificados antes de sua incorporação ao projeto.
+
+A responsabilidade científica, metodológica, acadêmica e autoral pelo conteúdo publicado permanece integralmente atribuída ao autor.
+
+Como referência para o uso responsável de Inteligência Artificial em contexto educacional, foi considerado o documento do Ministério da Educação:
+
+**BRASIL. Ministério da Educação. Referencial para o Uso e Desenvolvimento Responsáveis de Inteligência Artificial na Educação. Brasília, DF: Ministério da Educação, 2026.**
+
+Documento oficial:
+https://www.gov.br/mec/pt-br/referencial-de-ia-na-educacao
