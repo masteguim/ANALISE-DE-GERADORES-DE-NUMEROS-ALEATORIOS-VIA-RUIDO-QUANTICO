@@ -46,9 +46,9 @@ Gerador pseudorrandômico didático baseado no **Mersenne Twister**, utilizando 
 
 Gerador pseudorrandômico criptograficamente seguro utilizando:
 
-```python
+~~~python
 secrets.randbits(1)
-```
+~~~
 
 A aleatoriedade é fornecida por uma fonte segura disponibilizada pelo sistema operacional.
 
@@ -64,11 +64,11 @@ Circuito executado com **Qiskit Aer**, formado por:
 
 Idealmente:
 
-```text
+~~~text
 H|0> = (|0> + |1>) / sqrt(2)
 
 P(0) = P(1) = 0,5
-```
+~~~
 
 Foram utilizadas sementes de simulação entre `1001` e `1030`.
 
@@ -93,52 +93,50 @@ O experimento deve ser interpretado como uma demonstração utilizando um dispos
 
 ## Notebooks
 
-### `IC_PRNG_padronizado_estatistica.ipynb`
+### [IC_PRNG_padronizado_estatistica.ipynb](notebooks/IC_PRNG_padronizado_estatistica.ipynb)
 
-Contém os experimentos realizados com o PRNG didático baseado no Mersenne Twister.
+Contém a análise do PRNG didático baseado no Mersenne Twister, utilizando semente fixa igual a `7`.
 
-### `CSPRNG_padronizado_estatistica.ipynb`
+### [CSPRNG_padronizado_estatistica.ipynb](notebooks/CSPRNG_padronizado_estatistica.ipynb)
 
-Contém os experimentos realizados com o CSPRNG baseado no módulo `secrets`.
+Contém a análise do CSPRNG baseado no módulo `secrets`.
 
-### `sim_QRNGs_padronizado_estatistica.ipynb`
+### [sim_QRNGs_padronizado_estatistica.ipynb](notebooks/sim_QRNGs_padronizado_estatistica.ipynb)
 
 Contém a simulação do circuito quântico utilizando Qiskit Aer.
 
-### `IC_QRNG_IBM_padronizado_estatistica.ipynb`
+### [IC_QRNG_IBM_reanalise_job_original.ipynb](notebooks/IC_QRNG_IBM_reanalise_job_original.ipynb)
 
-Contém a coleta e a análise dos dados obtidos em hardware quântico real da IBM.
+Realiza a reanálise dos dados brutos provenientes do Job original `da137vu3kjvs73868gp0`, sem realizar uma nova submissão à QPU.
+
+### [consolidacao_resultados_completa.ipynb](notebooks/consolidacao_resultados_completa.ipynb)
+
+Consolida as métricas das quatro fontes e gera os resultados estatísticos utilizados na comparação final.
 
 ---
 
-## Dados brutos da QPU
+## Dados brutos
 
-Os dados brutos utilizados no artigo estão disponíveis em:
+As sequências brutas utilizadas na comparação principal estão disponíveis em:
 
-```text
-dados/bruto/
-```
+[dados/bruto/](dados/bruto/)
 
-A pasta contém 30 arquivos:
+O diretório contém os dados correspondentes às quatro fontes analisadas:
 
-```text
-qpu_bruta_lote_01.txt
-qpu_bruta_lote_02.txt
-...
-qpu_bruta_lote_30.txt
-```
+- PRNG;
+- CSPRNG;
+- simulador quântico;
+- QPU IBM.
 
-Cada arquivo contém **10.000 bits**, totalizando **300.000 bits**.
+Cada fonte possui 30 lotes de 10.000 bits, totalizando 300.000 bits por fonte e 1.200.000 bits na comparação principal.
 
-Os dados foram recuperados diretamente do Job original:
+No caso da QPU IBM, os dados foram recuperados diretamente do Job original:
 
-```text
-da137vu3kjvs73868gp0
-```
+`da137vu3kjvs73868gp0`
 
 Não foi realizada uma nova execução da QPU para gerar esses arquivos.
 
-As sequências correspondem à saída bruta anterior à aplicação de qualquer procedimento de condicionamento.
+As sequências da QPU correspondem à saída bruta anterior à aplicação de qualquer procedimento de condicionamento.
 
 ---
 
@@ -146,9 +144,7 @@ As sequências correspondem à saída bruta anterior à aplicação de qualquer 
 
 Os metadados da coleta estão disponíveis em:
 
-```text
-dados/metadados/qpu_metadados_coleta.csv
-```
+[dados/metadados/qpu_metadados_coleta.csv](dados/metadados/qpu_metadados_coleta.csv)
 
 Entre as informações preservadas estão, quando disponíveis:
 
@@ -197,24 +193,24 @@ A análise utiliza a biblioteca `statsmodels`.
 
 Hipóteses:
 
-```text
+~~~text
 H0: o número de corridas observado é compatível com o comportamento esperado para a sequência analisada.
 
 H1: o número de corridas observado difere do comportamento esperado.
-```
+~~~
 
 Nível de significância:
 
-```text
+~~~text
 α = 0,05
-```
+~~~
 
 Regra de decisão:
 
-```text
+~~~text
 p >= 0,05 -> não rejeitar H0
 p < 0,05  -> rejeitar H0
-```
+~~~
 
 Para cada lote são armazenados, quando aplicável:
 
@@ -223,35 +219,32 @@ Para cada lote são armazenados, quando aplicável:
 - valor-p;
 - decisão estatística.
 
+Valores de `p >= 0,05` indicam apenas que não houve evidência estatística suficiente para rejeitar a hipótese nula. Esse resultado não comprova, isoladamente, aleatoriedade.
+
 ---
 
 ## Comparação estatística entre as fontes
 
-Além da análise descritiva, os lotes podem ser comparados por procedimentos estatísticos inferenciais.
+Além da análise descritiva, foi realizada uma análise inferencial exploratória entre os 30 lotes de cada uma das quatro fontes.
 
-### Kruskal-Wallis
+Foi utilizado o teste de Kruskal-Wallis para verificar a existência de diferenças globais entre as fontes.
 
-Utilizado para verificar diferenças globais entre as quatro fontes em métricas como:
+Também foi calculado o epsilon-quadrado (`ε²`) como medida de tamanho de efeito associada ao teste.
 
-- P(1);
-- viés;
-- entropia de Shannon;
-- min-entropia;
-- autocorrelação com defasagem 1.
+Nenhuma das métricas avaliadas apresentou diferença estatisticamente significativa entre as quatro fontes ao nível de significância de `α = 0,05`.
 
-### Tamanho de efeito
+Por esse motivo, não foram realizadas comparações pós-hoc de Mann-Whitney U com correção de Holm.
 
-O epsilon-quadrado (`ε²`) é utilizado como medida de tamanho de efeito associada ao teste de Kruskal-Wallis.
+Esses resultados não demonstram equivalência estatística entre as fontes. Eles indicam apenas que, nas condições experimentais, métricas avaliadas e tamanho amostral utilizados, não foram detectadas diferenças estatisticamente significativas.
 
-### Mann-Whitney U
+Os 30 lotes da QPU pertencem a uma mesma coleta e não devem ser interpretados como réplicas temporais independentes.
 
-Quando o teste global identifica diferença estatisticamente significativa, podem ser realizadas comparações par a par utilizando o teste de Mann-Whitney U.
+Os resultados completos estão disponíveis em:
 
-### Correção de Holm
-
-Os valores-p das comparações múltiplas são ajustados pelo método de Holm.
-
-Também pode ser utilizada a correlação bisserial de postos como medida do tamanho de efeito nas comparações par a par.
+- [Kruskal-Wallis](results/kruskal_wallis.csv)
+- [Mann-Whitney/Holm](results/mann_whitney_holm.csv)
+- [Tamanhos de efeito](results/tamanhos_efeito.csv)
+- [Resumo global](results/resumo_global.csv)
 
 ---
 
@@ -263,12 +256,12 @@ Foram avaliados dois métodos.
 
 ### Método de von Neumann
 
-```text
+~~~text
 00 -> descartado
 11 -> descartado
 01 -> utilizado para produzir um bit
 10 -> utilizado para produzir um bit
-```
+~~~
 
 O procedimento pode reduzir determinados tipos de viés sob hipóteses adequadas, porém reduz a quantidade de bits disponível.
 
@@ -280,10 +273,10 @@ Cada bloco produz **256 bits**.
 
 Para cada lote original de 10.000 bits:
 
-```text
+~~~text
 9 x 1.024 = 9.216 bits processados
 9 x 256   = 2.304 bits de saída
-```
+~~~
 
 Os bits restantes que não completam um bloco são desconsiderados.
 
@@ -304,7 +297,7 @@ Sua aplicação não cria nova entropia e não constitui, isoladamente, prova de
 
 As quatro fontes apresentaram distribuições próximas do equilíbrio entre 0 e 1.
 
-Mesmo utilizando mecanismos distintos, foram observadas propriedades estatísticas semelhantes.
+Foram observados comportamentos estatísticos próximos em várias das métricas analisadas, sem que isso implique equivalência entre as fontes.
 
 Esse resultado reforça que bom desempenho estatístico não comprova, isoladamente:
 
@@ -350,19 +343,17 @@ As métricas pós-condicionamento devem ser interpretadas considerando que os ta
 
 Os arquivos utilizados nas análises estão disponíveis em:
 
-```text
-dados/metricas/
-```
+[dados/metricas/](dados/metricas/)
 
 Principais arquivos:
 
-```text
+~~~text
 prng_metricas_30x10000.csv
 csprng_metricas_30x10000.csv
 simulador_metricas_30x10000.csv
 qpu_bruta_metricas_30x10000.csv
 qpu_condicionamento_metricas.csv
-```
+~~~
 
 Esses arquivos contêm as métricas calculadas por lote e servem de base para as tabelas e análises estatísticas apresentadas no artigo.
 
@@ -372,13 +363,17 @@ Esses arquivos contêm as métricas calculadas por lote e servem de base para as
 
 Os hashes SHA-256 dos arquivos experimentais estão disponíveis em:
 
-```text
-checksums/SHA256SUMS.txt
-```
+[checksums/SHA256SUMS.txt](checksums/SHA256SUMS.txt)
 
 Os hashes permitem verificar a integridade dos arquivos e identificar eventuais alterações em seu conteúdo.
 
+A partir da raiz do repositório, a verificação pode ser realizada com:
 
+~~~bash
+sha256sum -c checksums/SHA256SUMS.txt
+~~~
+
+---
 
 ## Tecnologias utilizadas
 
@@ -391,6 +386,7 @@ Os hashes permitem verificar a integridade dos arquivos e identificar eventuais 
 - Pandas
 - SciPy
 - Statsmodels
+- Matplotlib
 
 ---
 
@@ -413,7 +409,7 @@ Não são publicados:
 
 Foram preservados, quando disponíveis:
 
-- dados brutos da QPU;
+- dados brutos das fontes analisadas;
 - métricas calculadas por lote;
 - arquivos CSV utilizados nas análises;
 - metadados experimentais;
@@ -427,7 +423,7 @@ Foram preservados, quando disponíveis:
 - informações de calibração;
 - checksums SHA-256.
 
-O PRNG utiliza semente fixa e pode reproduzir a mesma sequência.
+O PRNG utiliza semente fixa igual a `7` e pode reproduzir a mesma sequência.
 
 O simulador utiliza sementes controladas.
 
@@ -450,6 +446,8 @@ Os experimentos atuais não permitem avaliar de forma conclusiva a estabilidade 
 A min-entropia corresponde a uma estimativa empírica e não representa uma caracterização formal de uma fonte de entropia segundo a NIST SP 800-90B.
 
 Os testes estatísticos também não constituem certificação de segurança criptográfica.
+
+A ausência de diferença estatisticamente significativa na análise exploratória não deve ser interpretada como demonstração de equivalência entre as fontes.
 
 ---
 
@@ -477,8 +475,3 @@ A aprovação em testes estatísticos não constitui, isoladamente, garantia de 
 
 Universidade Presbiteriana Mackenzie  
 Iniciação Científica — PIVIC Mackenzie
----
-
-## Título do projeto
-
-**Análise de geradores de números aleatórios via ruído quântico e como contribuem para segurança da informação em computação**
