@@ -93,7 +93,7 @@ O experimento deve ser interpretado como uma demonstração utilizando um dispos
 
 ## Notebooks
 
-### [IC_PRNG_padronizado_estatistica.ipynb](notebooks/IC_PRNG_padronizado_estatistica.ipynb)
+### [IC_PRNG_padronizado_estatistica_.ipynb](notebooks/IC_PRNG_padronizado_estatistica_.ipynb)
 
 Contém a análise do PRNG didático baseado no Mersenne Twister, utilizando semente fixa igual a `7`.
 
