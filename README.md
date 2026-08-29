@@ -105,7 +105,7 @@ Contém a análise do CSPRNG baseado no módulo `secrets`.
 
 Contém a simulação do circuito quântico utilizando Qiskit Aer.
 
-### [IC_QRNG_IBM_reanalise_job_original.ipynb](notebooks/IC_QRNG_IBM_reanalise_job_original.ipynb)
+### [IC_QRNG_IBM_padronizado_estatistica.ipynb](notebooks/IC_QRNG_IBM_padronizado_estatistica.ipynb)
 
 Realiza a reanálise dos dados brutos provenientes do Job original `da137vu3kjvs73868gp0`, sem realizar uma nova submissão à QPU.
 
