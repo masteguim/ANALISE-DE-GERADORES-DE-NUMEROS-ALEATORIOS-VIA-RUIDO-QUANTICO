@@ -109,10 +109,6 @@ Contém a simulação do circuito quântico utilizando Qiskit Aer.
 
 Realiza a reanálise dos dados brutos provenientes do Job original `da137vu3kjvs73868gp0`, sem realizar uma nova submissão à QPU.
 
-### [consolidacao_resultados_completa.ipynb](notebooks/consolidacao_resultados_completa.ipynb)
-
-Consolida as métricas das quatro fontes e gera os resultados estatísticos utilizados na comparação final.
-
 ---
 
 ## Dados brutos
