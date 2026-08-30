@@ -1,0 +1,30 @@
+{
+  "title": "Análise comparativa de geradores pseudorrandômicos e de sequências obtidas por medição quântica",
+  "description": "Códigos, notebooks, dados experimentais e resultados utilizados na análise comparativa entre PRNG, CSPRNG, simulador de circuito quântico e sequências obtidas em uma QPU IBM.",
+  "creators": [
+    {
+      "name": "Masteguim, Lucas Diniz Ferreira",
+      "affiliation": "Universidade Presbiteriana Mackenzie"
+    }
+  ],
+  "contributors": [
+    {
+      "name": "Licciardi Junior, Antonio Newton",
+      "affiliation": "Universidade Presbiteriana Mackenzie",
+      "type": "Supervisor"
+    }
+  ],
+  "version": "1.0.0",
+  "access_right": "open",
+  "license": "mit",
+  "upload_type": "software",
+  "language": "por",
+  "keywords": [
+    "quantum random number generation",
+    "random number generators",
+    "quantum computing",
+    "entropy",
+    "cryptographic security",
+    "Qiskit"
+  ]
+}
