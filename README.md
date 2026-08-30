@@ -1,5 +1,7 @@
 # Análise comparativa de geradores pseudorrandômicos e de sequências obtidas por medição quântica
 
+[![DOI](https://zenodo.org/badge/1338844814.svg)](https://doi.org/10.5281/zenodo.22167640)
+
 ### Implicações para a segurança da informação
 
 Projeto de Iniciação Científica desenvolvido na **Universidade Presbiteriana Mackenzie**, com foco na comparação entre diferentes mecanismos de geração de números aleatórios e na análise das propriedades estatísticas das sequências produzidas.
