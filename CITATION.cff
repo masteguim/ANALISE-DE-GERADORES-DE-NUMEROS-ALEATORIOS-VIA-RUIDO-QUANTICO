@@ -1,11 +1,26 @@
 cff-version: 1.2.0
-message: "Se você utilizar este repositório, cite-o da seguinte forma."
+message: "Se utilizar este software ou os dados, cite o trabalho indicado."
 title: "Análise comparativa de geradores pseudorrandômicos e de sequências obtidas por medição quântica"
+version: 1.0.0
 type: software
+license: MIT
 
 authors:
-  - family-names: "Masteguim"
-    given-names: "Lucas Diniz Ferreira"
+  - given-names: "Lucas Diniz Ferreira"
+    family-names: "Masteguim"
     affiliation: "Universidade Presbiteriana Mackenzie"
 
+abstract: >
+  Códigos, notebooks, dados experimentais e resultados utilizados na
+  análise comparativa entre PRNG, CSPRNG, simulador de circuito quântico
+  e sequências obtidas em uma QPU IBM.
+
 repository-code: "https://github.com/masteguim/ANALISE_COMPARATIVA_DE_GERADORES_PSEUDORRANDOMICOS_E_DE_SEQUENCIAS_OBTIDAS_POR_MEDICAO_QUANTICA"
+
+keywords:
+  - quantum random number generation
+  - random number generators
+  - quantum computing
+  - entropy
+  - cryptographic security
+  - Qiskit
