@@ -4,6 +4,7 @@ title: "Análise comparativa de geradores pseudorrandômicos e de sequências ob
 version: 1.0.0
 type: software
 license: MIT
+doi: "10.5281/zenodo.22167640"
 
 authors:
   - given-names: "Lucas Diniz Ferreira"
